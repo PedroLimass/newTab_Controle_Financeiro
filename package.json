@@ -1,0 +1,11 @@
+{
+  "name": "newTab_Controle_Financeiro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/PedroLimass/newTab_Controle_Financeiro.git",
+  "author": "Pedro <phlimas@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}

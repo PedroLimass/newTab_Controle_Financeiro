@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./Css/style.css" />
+        <title>Controle financeiro</title>
+    </head>
+    <body>
+        <header>
+            <div id="container-header">
+                <div id="logo">
+                    <img src="./Assets/logoOficial.svg" alt="Logo" />
+                    <h1>Controle financeiro</h1>
+                </div>
+                <nav id="menu">
+                    <h3><a href="#">Dashboard</a></h3>
+                    <h3><a href="#">Resumo</a></h3>
+                    <h3><a href="#">Configurações</a></h3>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="new-transaction">
+                <h2>Nova transação</h2>
+                <label for="purchase" class="label-transaction">
+                    Tipo de transação</label
+                >
+                <select name="" id="purchase" class="input-transaction">
+                    <option value="valor1">Valor 1</option>
+                    <option value="valor2" selected>Valor 2</option>
+                    <option value="valor3">Valor 3</option>
+                </select>
+                <label for="only-input">Nome da mercadoria</label>
+                <input
+                    type="text"
+                    id="only-input"
+                    class="input-transaction"
+                    placeholder="Input"
+                />
+                <label for="moeney-input">Valor</label>
+                <input
+                    type="number"
+                    id="moeney-input"
+                    class="input-transaction"
+                    placeholder="Input"
+                />
+                <input
+                    type="button"
+                    id="btn-add-transition"
+                    value="Adicionar transação"
+                />
+            </section>
+            <section id="transaction-box">
+                <h2>Extrato de transações</h2>
+                <table id="table-transaction">
+                    <thead>
+                        <tr>
+                            <th class="table-left">Mercadoria</th>
+                            <th class="table-right">Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr >
+                            <td class="table-left">Lorem ipsum dolor sit amet consectetur</td>
+                            <td class="table-right">R$ 12.999,99</td>
+                        </tr>
+                        <tr>
+                            <td class="table-left">Quis nostrud exercitation</td>
+                            <td class="table-right">R$ 99,99</td>
+                        </tr>
+                        <tr>
+                            <td class="table-left">Lorem ipsum </td>
+                            <td class="table-right">R$ 9,99</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td  class="table-left">Total</td>
+                            <td class="table-right">R$ 12.909,99</br><span class="lucro-span">[LUCRO]</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+</html>
