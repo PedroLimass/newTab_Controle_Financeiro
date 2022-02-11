@@ -140,6 +140,10 @@ footer {
         justify-content: space-around;
     }
 
+    label {
+        white-space: nowrap;
+    }
+
     .input-format {
         width: 150px;
         display: flex;
@@ -161,14 +165,26 @@ footer {
     }
 }
 
-@media screen and (max-width: 416px) {
+@media (max-width: 416px) {
     main {
-        flex-direction: column;
+        row-gap: 20px;
     }
 
     #new-transaction {
-        height: auto;
+        height: 290px;
+        margin-bottom: 20px;
         flex-direction: column;
+        border: none;
+        border-bottom: 1px solid #979797;
+        margin-bottom: 0;
+    }
+
+    .table-right {
+        width: 98px;
+    }
+
+    #new-transaction h2 {
+        display: none;
     }
 
     #organize-inputs {
@@ -181,8 +197,7 @@ footer {
     }
 
     #btn-add-transition {
-        width: 100%;        
+        width: 100%;
         align-self: center;
-        
     }
 }

@@ -55,7 +55,7 @@ header {
     border-left: 1px solid #979797;
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1112px) {
     #menu__toggle {
         display: none;
     }
@@ -63,11 +63,19 @@ header {
     #hamburger-menu {
         display: none;
     }
+
+    #title-mobile {
+        display: none;
+    }
 }
 
-@media screen and (max-width: 1200px) {
+@media (max-width: 1112px) {
     #container-header {
         padding: 0 20px;
+    }
+
+    #title-mobile {
+        display: initial;
     }
 
     #menu {
@@ -76,10 +84,6 @@ header {
 
     #logo h1 {
         display: none;
-    }
-
-    #name-mobile {
-        /* align-self: center; */
     }
 
     /*Above*/
@@ -172,7 +176,7 @@ header {
     }
 }
 
-@media screen and (max-width: 416px) {
+@media (max-width: 416px) {
     .menu__box {
         width: 350px;
     }
