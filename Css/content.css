@@ -1,18 +1,21 @@
 main {
-    width: 1100px;
-    height: 1000px;
+    max-width: 1100px;
+    height: 100vh;
     display: flex;
     align-self: center;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
     margin: 0 auto;
     padding-top: 30px;
 }
 
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    height: 8px;
+    height: 20px;
     background: #333333;
+    position: fixed;
 }
 
 #new-transaction {
@@ -108,4 +111,78 @@ footer {
     line-height: 22px;
     letter-spacing: 0px;
     text-align: right;
+}
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+    main {
+        padding: 20px 20px 0;
+        flex-flow: row nowrap;
+    }
+}
+
+@media screen and (max-width: 1200px) and (orientation: portrait) {
+    main {
+        padding: 20px 20px 0;
+        flex-direction: column;
+        row-gap: 23px;
+    }
+
+    #new-transaction {
+        width: 100%;
+        height: 189px;
+        padding: 20px 10px;
+        justify-content: space-around;
+    }
+
+    #organize-inputs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .input-format {
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #btn-add-transition {
+        width: 200px;
+        margin: 0 10px;
+        align-self: flex-end;
+    }
+    .name-product {
+        width: 348px;
+    }
+
+    #transaction-box {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 416px) {
+    main {
+        flex-direction: column;
+    }
+
+    #new-transaction {
+        height: auto;
+        flex-direction: column;
+    }
+
+    #organize-inputs {
+        display: initial;
+    }
+
+    .input-format {
+        width: 100%;
+        display: block;
+    }
+
+    #btn-add-transition {
+        width: 100%;        
+        align-self: center;
+        
+    }
 }

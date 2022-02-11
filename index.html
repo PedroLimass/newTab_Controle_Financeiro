@@ -14,38 +14,70 @@
                     <img src="./Assets/logoOficial.svg" alt="Logo" />
                     <h1>Controle financeiro</h1>
                 </div>
+
                 <nav id="menu">
                     <h3><a href="#">Dashboard</a></h3>
                     <h3><a href="#">Resumo</a></h3>
                     <h3><a href="#">Configurações</a></h3>
                 </nav>
+
+                <div id="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+
+                    <ul class="menu__box">
+                        <li>
+                            <a class="menu__item" href="#"
+                                ><h3>Dashboard</h3></a
+                            >
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#"><h3>Resumo</h3></a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#"
+                                ><h3>Configurações</h3></a
+                            >
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
         <main>
             <section id="new-transaction">
                 <h2>Nova transação</h2>
-                <label for="purchase" class="label-transaction">
-                    Tipo de transação</label
-                >
-                <select name="" id="purchase" class="input-transaction">
-                    <option value="valor1">Valor 1</option>
-                    <option value="valor2" selected>Valor 2</option>
-                    <option value="valor3">Valor 3</option>
-                </select>
-                <label for="only-input">Nome da mercadoria</label>
-                <input
-                    type="text"
-                    id="only-input"
-                    class="input-transaction"
-                    placeholder="Input"
-                />
-                <label for="moeney-input">Valor</label>
-                <input
-                    type="number"
-                    id="moeney-input"
-                    class="input-transaction"
-                    placeholder="Input"
-                />
+                <div id="organize-inputs">
+                    <div class="input-format">
+                        <label for="purchase" class="label-transaction">
+                            Tipo de transação</label
+                        >
+                        <select name="" id="purchase" class="input-transaction">
+                            <option value="valor1">Valor 1</option>
+                            <option value="valor2" selected>Valor 2</option>
+                            <option value="valor3">Valor 3</option>
+                        </select>
+                    </div>
+                    <div class="input-format name-product">
+                        <label for="only-input">Nome da mercadoria</label>
+                        <input
+                            type="text"
+                            id="only-input"
+                            class="input-transaction"
+                            placeholder="Input"
+                        />
+                    </div>
+                    <div class="input-format">
+                        <label for="moeney-input">Valor</label>
+                        <input
+                            type="number"
+                            id="moeney-input"
+                            class="input-transaction"
+                            placeholder="Input"
+                        />
+                    </div>
+                </div>
                 <input
                     type="button"
                     id="btn-add-transition"
@@ -62,23 +94,31 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr >
-                            <td class="table-left">Lorem ipsum dolor sit amet consectetur</td>
+                        <tr>
+                            <td class="table-left">
+                                Lorem ipsum dolor sit amet consectetur
+                            </td>
                             <td class="table-right">R$ 12.999,99</td>
                         </tr>
                         <tr>
-                            <td class="table-left">Quis nostrud exercitation</td>
+                            <td class="table-left">
+                                Quis nostrud exercitation
+                            </td>
                             <td class="table-right">R$ 99,99</td>
                         </tr>
                         <tr>
-                            <td class="table-left">Lorem ipsum </td>
+                            <td class="table-left">Lorem ipsum</td>
                             <td class="table-right">R$ 9,99</td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td  class="table-left">Total</td>
-                            <td class="table-right">R$ 12.909,99</br><span class="lucro-span">[LUCRO]</span></td>
+                            <td class="table-left">Total</td>
+                            <td class="table-right">
+                                R$ 12.909,99<br /><span class="lucro-span"
+                                    >[LUCRO]</span
+                                >
+                            </td>
                         </tr>
                     </tfoot>
                 </table>
