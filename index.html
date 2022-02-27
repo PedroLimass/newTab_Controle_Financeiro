@@ -16,9 +16,8 @@
                 </div>
                 <h1 id="title-mobile">Controle financeiro</h1>
                 <nav id="menu">
-                    <h3><a href="#">Dashboard</a></h3>
-                    <h3><a href="#">Resumo</a></h3>
-                    <h3><a href="#">Configurações</a></h3>
+                    <h3><a href="#">Limpar dados</a></h3>
+                    <h3><a href="#">Cadastro de transações</a></h3>
                 </nav>
 
                 <div id="hamburger-menu">
@@ -30,15 +29,12 @@
                     <ul class="menu__box">
                         <li>
                             <a class="menu__item" href="#"
-                                ><h3>Dashboard</h3></a
+                                ><h3>Limpar dados</h3></a
                             >
                         </li>
                         <li>
-                            <a class="menu__item" href="#"><h3>Resumo</h3></a>
-                        </li>
-                        <li>
                             <a class="menu__item" href="#"
-                                ><h3>Configurações</h3></a
+                                ><h3>Cadastro de transações</h3></a
                             >
                         </li>
                     </ul>
@@ -46,46 +42,52 @@
             </div>
         </header>
         <main>
-            <section id="new-transaction">
-                <h2>Nova transação</h2>
-                <div id="organize-inputs">
-                    <div class="input-format">
-                        <label for="purchase" class="label-transaction">
-                            Tipo de transação</label
-                        >
-                        <select name="" id="purchase" class="input-transaction">
-                            <option value="valor1">Valor 1</option>
-                            <option value="valor2" selected>Valor 2</option>
-                            <option value="valor3">Valor 3</option>
-                        </select>
+            <form id="addTransition" method="post">
+                <section id="new-transaction">
+                    <h2>Nova transação</h2>
+                    <div id="organize-inputs">
+                        <div class="input-format">
+                            <label for="purchase" class="label-transaction">
+                                Tipo de transação</label
+                            >
+                            <select
+                                name="purchase"
+                                id="purchase"
+                                class="input-transaction"
+                            >
+                                <option value="+">Compra</option>
+                                <option value="-">Venda</option>
+                            </select>
+                        </div>
+                        <div class="input-format name-product">
+                            <label for="nameProduct">Nome da mercadoria</label>
+                            <input
+                                type="text"
+                                id="nameProduct"
+                                class="input-transaction"
+                                required
+                            />
+                        </div>
+                        <div class="input-format">
+                            <label for="moeneyInput">Valor</label>
+                            <input
+                                id="moeneyInput"
+                                class="input-transaction"
+                                placeholder="R$ 0,00"
+                                required
+                            />
+                        </div>
                     </div>
-                    <div class="input-format name-product">
-                        <label for="only-input">Nome da mercadoria</label>
-                        <input
-                            type="text"
-                            id="only-input"
-                            class="input-transaction"
-                            placeholder="Input"
-                        />
-                    </div>
-                    <div class="input-format">
-                        <label for="moeney-input">Valor</label>
-                        <input
-                            type="number"
-                            id="moeney-input"
-                            class="input-transaction"
-                            placeholder="Input"
-                        />
-                    </div>
-                </div>
-                <input
-                    type="button"
-                    id="btn-add-transition"
-                    value="Adicionar transação"
-                />
-            </section>
+                    <input
+                        type="submit"
+                        id="btn-add-transition"
+                        value="Adicionar transação"                        
+                    />
+                </section>
+            </form>
             <section id="transaction-box">
                 <h2>Extrato de transações</h2>
+                <h2 id="checkGetData">Nenhuma transação cadastrada</h2>
                 <table id="table-transaction">
                     <thead>
                         <tr>
@@ -126,5 +128,7 @@
             </section>
         </main>
         <footer></footer>
+        \
+        <script type="module" src="Js/script.js"></script>
     </body>
 </html>

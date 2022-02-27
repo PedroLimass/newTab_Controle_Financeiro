@@ -95,6 +95,10 @@ footer {
     padding-top: 10px;
 }
 
+#checkGetData {
+    display: none;
+}
+
 .table-left {
     text-align: left;
 }

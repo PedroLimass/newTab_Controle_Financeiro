@@ -51,10 +51,6 @@ header {
     border-right: 1px solid #979797;
 }
 
-#menu h3:last-of-type {
-    border-left: 1px solid #979797;
-}
-
 @media (min-width: 1112px) {
     #menu__toggle {
         display: none;
