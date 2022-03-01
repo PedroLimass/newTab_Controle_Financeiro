@@ -21,7 +21,7 @@ footer {
 #new-transaction {
     display: flex;
     flex-direction: column;
-    height: 344px;
+    min-height: 344px;
     width: 400px;
     left: 0px;
     top: 0px;
@@ -63,6 +63,7 @@ footer {
     line-height: 22px;
     letter-spacing: 0px;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 #transaction-box {
@@ -97,6 +98,20 @@ footer {
 
 #checkGetData {
     display: none;
+}
+
+#formAlert {
+    text-align: center;
+    background-color: #d32f2f;
+    padding: 10px;
+    width: 100%;    
+    color: white;
+    display: none;    
+}
+
+.typeStyle {
+    margin-left: 20px;
+    margin-right: 11px;    
 }
 
 .table-left {

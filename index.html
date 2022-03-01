@@ -16,7 +16,7 @@
                 </div>
                 <h1 id="title-mobile">Controle financeiro</h1>
                 <nav id="menu">
-                    <h3><a href="#">Limpar dados</a></h3>
+                    <h3 id="clearData"><a href="#">Limpar dados</a></h3>
                     <h3><a href="#">Cadastro de transações</a></h3>
                 </nav>
 
@@ -45,6 +45,7 @@
             <form id="addTransition" method="post">
                 <section id="new-transaction">
                     <h2>Nova transação</h2>
+                    <h3 id="formAlert">Preencha todos os campos!</h3>
                     <div id="organize-inputs">
                         <div class="input-format">
                             <label for="purchase" class="label-transaction">
@@ -65,23 +66,21 @@
                                 type="text"
                                 id="nameProduct"
                                 class="input-transaction"
-                                required
                             />
                         </div>
                         <div class="input-format">
-                            <label for="moeneyInput">Valor</label>
+                            <label for="moneyInput">Valor</label>
                             <input
-                                id="moeneyInput"
+                                id="moneyInput"
                                 class="input-transaction"
                                 placeholder="R$ 0,00"
-                                required
                             />
                         </div>
                     </div>
                     <input
                         type="submit"
                         id="btn-add-transition"
-                        value="Adicionar transação"                        
+                        value="Adicionar transação"
                     />
                 </section>
             </form>
@@ -95,31 +94,14 @@
                             <th class="table-right">Valor</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td class="table-left">
-                                Lorem ipsum dolor sit amet consectetur
-                            </td>
-                            <td class="table-right">R$ 12.999,99</td>
-                        </tr>
-                        <tr>
-                            <td class="table-left">
-                                Quis nostrud exercitation
-                            </td>
-                            <td class="table-right">R$ 99,99</td>
-                        </tr>
-                        <tr>
-                            <td class="table-left">Lorem ipsum</td>
-                            <td class="table-right">R$ 9,99</td>
-                        </tr>
-                    </tbody>
+                    <tbody></tbody>
                     <tfoot>
                         <tr>
                             <td class="table-left"><strong>Total</strong></td>
                             <td class="table-right">
-                                <strong>R$ 12.909,99</strong><br /><span
+                                <strong id="amount"></strong><br /><span
                                     class="lucro-span"
-                                    >[LUCRO]</span
+                                    ></span
                                 >
                             </td>
                         </tr>
