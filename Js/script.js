@@ -22,14 +22,21 @@ const money = document.getElementById('moneyInput')
 
 money.addEventListener('keydown', (event) => {
     let value = event.target.value
-    console.log(value)
 
     value = value.replace('.', '').replace(',', '').replace(/\D/g, '')
 
-    const options = { minimumFractionDigits: 2 }
-    const result = new Intl.NumberFormat('pt-BR', options).format(
-        parseFloat(value) / 100
-    )
+    // const result = (Number(value) / 100)
+    //     .toFixed(2)
+    //     .replace('.', ',')
+    //     .split('')
+    //     .reverse()
+    //     .map((v, i) => (i > 5 && (i + 6) % 3 === 0 ? `${v}.` : v))
+    //     .reverse()
+    //     .join('')
+
+    const result = (Number(value) / 100)
+        .toFixed(2)
+        .replace(/\d(?=(\d{3})+\.)/g, '$&,')
 
     document.getElementById('moneyInput').value = result
 })
@@ -40,6 +47,6 @@ const clearBtn = document.getElementById('clearData')
 
 clearBtn.addEventListener('click', () => {
     if (confirm('Você tem certeza que deseja apagar todos os extratos?')) {
-        deleteData()        
+        deleteData()
     }
 })
