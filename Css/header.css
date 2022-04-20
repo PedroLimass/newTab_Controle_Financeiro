@@ -52,6 +52,7 @@ header {
 }
 
 @media (min-width: 1112px) {
+        
     #menu__toggle {
         display: none;
     }
@@ -65,7 +66,10 @@ header {
     }
 }
 
-@media (max-width: 1112px) {
+@media (max-width: 1111px) {
+    header {
+        padding:  0 5px 0;
+    }
     #container-header {
         padding: 0 20px;
     }
@@ -107,7 +111,7 @@ header {
     }
 
     .menu__btn {
-        position: fixed;
+        position: absolute;
         top: 40px;
         right: 20px;
         width: 18px;
@@ -120,7 +124,7 @@ header {
     .menu__btn > span::after {
         display: block;
         position: absolute;
-        width: 100%;
+        width: 18px;
         height: 2px;
         background-color: #616161;
         transition-duration: 0.25s;

@@ -85,6 +85,10 @@ footer {
     border-bottom: 1px solid #979797;
 }
 
+hr {
+    border-color: red;
+}
+
 #table-transaction th {
     padding-bottom: 10px;
     border-bottom: 1px solid #979797;
@@ -104,18 +108,30 @@ footer {
     text-align: center;
     background-color: #d32f2f;
     padding: 10px;
-    width: 100%;    
+    width: 100%;
     color: white;
-    display: none;    
+    display: none;
 }
 
 .typeStyle {
     margin-left: 20px;
-    margin-right: 11px;    
+    margin-right: 11px;
+    position: relative;
+}
+
+.tableEmpety {
+    width: 20px;
 }
 
 .table-left {
     text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.dataInfo {
+    max-width: 200px;
+    white-space: pre-line;
 }
 
 .table-right {
@@ -132,14 +148,14 @@ footer {
     text-align: right;
 }
 
-@media screen and (max-width: 1200px) and (orientation: landscape) {
+@media screen and (max-width: 1200px) {
     main {
         padding: 20px 20px 0;
         flex-flow: row nowrap;
     }
 }
 
-@media screen and (max-width: 1200px) and (orientation: portrait) {
+@media screen and (max-width: 1111px) {
     main {
         padding: 20px 20px 0;
         flex-direction: column;
@@ -175,7 +191,9 @@ footer {
         align-self: flex-end;
     }
     .name-product {
+        max-width: 100%;
         width: 348px;
+        margin: 0 5%;
     }
 
     #transaction-box {
@@ -204,6 +222,10 @@ footer {
 
     #new-transaction h2 {
         display: none;
+    }
+
+    .name-product {
+        margin: 0 0;
     }
 
     #organize-inputs {

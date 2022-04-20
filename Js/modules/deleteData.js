@@ -25,7 +25,7 @@ const deleteData = async () => {
         })
         .join('')
 
-    await fetch(
+    const deleteStatus = await fetch(
         'https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico' + records,
 
         {
@@ -35,11 +35,9 @@ const deleteData = async () => {
                 'Content-Type': 'application/json',
             },
         }
-    ).then((response) =>
-        response.status === 200
-            ? window.location.reload()
-            : window.alert('Error ao deletar Extrato')
     )
+
+    return deleteStatus
 }
 
 export default deleteData
