@@ -13,7 +13,6 @@ const fetchData = async () => {
     )
         .then((response) => response.json())
         .then((json) => {
-            console.log(json)
             if (json.records.length === 0) {
                 document.getElementById('checkGetData').style.display = 'block'
                 document.getElementById('table-transaction').style.display =
@@ -32,17 +31,6 @@ const fetchData = async () => {
                     let value = 'R$ ' + data[0].value
 
                     return (
-                        // '<tr>' +
-                        // '<td class="table-left">' +
-                        // '<span class="typeStyle">' +
-                        // type +
-                        // '</span>' +
-                        // info +
-                        // '</td>' +
-                        // '<td class="table-right">' +
-                        // value +
-                        // '</td>' +
-                        // '</tr>'
                         '<tr>' +
                         '<td>' +
                         '<span class="typeStyle">' +
@@ -61,12 +49,6 @@ const fetchData = async () => {
                     )
                 })
 
-                // '<tr>'+
-                // +'<td>'+ type +'</td>'+
-                // +'<td>'+ info +'</td>'+
-                // +'<td>'+ value +'</td>'+
-                // '</tr>'
-
                 document.querySelector('tbody').innerHTML = row.join('')
 
                 let amount = json.records
@@ -80,7 +62,7 @@ const fetchData = async () => {
                                     .split(',')
                                     .join('.')
                         )
-                        console.log(aff)
+
                         return aff
                     })
                     .reduce((acc, amount) => acc + amount)
@@ -90,10 +72,12 @@ const fetchData = async () => {
                     amount
                 )
 
-                document.querySelector('#amount').innerHTML = 'R$ ' + amount
+                document.querySelector('#amount').innerHTML = 'R$ ' + result
 
-                if (Number(result.replace(',', '.')) > 0) {
+                if (parseFloat(result.replace(',', '.')) > 0) {
                     document.querySelector('.lucro-span').innerHTML = '[LUCRO]'
+                } else if (parseFloat(result.replace(',', '.')) === 0) {
+                    document.querySelector('.lucro-span').innerHTML = ''
                 } else {
                     document.querySelector('.lucro-span').innerHTML =
                         '[PREJUÍZO]'
