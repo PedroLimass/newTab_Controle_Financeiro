@@ -20,14 +20,14 @@ form.addEventListener('submit', (event) => {
     let name = form.elements['nameProduct'].value
     let value = form.elements['moneyInput'].value
 
-    postConfirm(type, name, value)    
+    postConfirm(type, name, value)
 })
 
 // Money Mask
 
 const money = document.getElementById('moneyInput')
 
-money.addEventListener('keydown', (event) => {
+function validate() {
     let value = event.target.value
 
     value = value + ''
@@ -37,6 +37,22 @@ money.addEventListener('keydown', (event) => {
     value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.')
 
     document.getElementById('moneyInput').value = value
+}
+
+// money.addEventListener('keydown', (event) => {
+//     let value = event.target.value
+
+//     value = value + ''
+//     value = value.replace(/[\D]+/g, '')
+//     value = value + ''
+//     value = value.replace(/([0-9]{2})$/g, ',$1')
+//     value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+
+//     document.getElementById('moneyInput').value = value
+// })
+
+;['keyup', 'keypress', 'blur', 'change'].forEach((eventName) => {
+    money.addEventListener(eventName, validate)
 })
 
 // Clear Data
